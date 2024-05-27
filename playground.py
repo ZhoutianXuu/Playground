@@ -146,16 +146,107 @@ Today is a good day
 # print('birthday' in y) # not a subset of y --> False
 
 '''bool (True or False / 1 or 0)'''
-x = True
-print(x, type(x), x+10, False + 10) # T = 1, F = 0
-print(bool(18)) # test int(18)'s bool value --> True
-print(bool(0), bool(0.0)) # False, False
-# Conclusion: Non-0 values' bool value are always True
-print(bool('Helloworld'), bool('')) # True, False
-# Conclusion: Non-empty values's bool value are always True
-print(bool(False), bool(None)) # False, False for None
+# x = True
+# print(x, type(x), x+10, False + 10) # T = 1, F = 0
+# print(bool(18)) # test int(18)'s bool value --> True
+# print(bool(0), bool(0.0)) # False, False
+# # Conclusion: Non-0 values' bool value are always True
+# print(bool('Helloworld'), bool('')) # True, False
+# # Conclusion: Non-empty values's bool value are always True
+# print(bool(False), bool(None)) # False, False for None
 
+'''Data type conversion'''
+# x = 10
+# y = 3
+# z = x/y
+# print(z, type(z))
+# print('float converts to int:', int(3.14), int(-3.9))
+# print('int converts to float: ', float(10))
+# print('str converts to int:', int('100')+int('200'))
+# print('error:', int('18a')) # invalid literal for int() with base 10: '18a
+# print(int('3.14')) # invalid literal for int() with base 10: '3.14'
+# print(float('45a.987')) # ValueError: could not convert string to float: '45a.987'
+### chr() and ord()
+# print(ord('s')) # the integer value in unicode of 's'
+# print(chr(115)) # the char of 115 in unicode
+# print('DEC to HEX;', hex(26472))
+# print('DEC to OCT:', oct(26472))
+# print('DEC to BIN:', bin(26472))
 
+'''eval() # remove the outside '' and run '''
+# s = '3.14+3'
+# print(s, type(s))
+# x = eval(s)
+# print(x,type(x))
+# # eval() usually use with input()
+# age = eval(input('Input your age:')) # convert str to int, same as int(age)
+# print(age, type(age))
+# hello = 'hello'
+# print(eval('hello'))
+
+'''Arithmetic operations'''
+# print('addition:', 1+1)
+# print('minus:', 1-1)
+# print('multiply:', 2*3)
+# print('divide:', 10/2)
+# print('divisible:', 10//3)
+# print('mod:', 10%3)
+# print('to x times:', 2**4) #2*2*2*2 or 2^2
+# print(10/0) # error, division by zero
+
+'''assignment-operator'''
+x = 20
+y = 10
+x = x + y # x = 20 + 10 = 30
+x+=y # same as x = x + y
+print(x) # x = 30 + 10
+x-=y # same as x = x - y
+print(x)
+x*=y # same as x = x * y
+print(x)
+x/=y # x = x / y, type converts to float
+print(x, type(x))
+x%=2 # x = x % 2 
+print(x)
+z = 3
+y//=z # y = y // z
+print(y)
+y**=2
+print(y)
+a = b = c = 100 # a = 100, b = 100, c = 100
+print(a,b,c)
+a,b = 10,20 # a = 10, b = 20
+print(a,b)
+a,b = b,a # a = b, b = a at same time
+print(a,b)
+c = 32
+a, b, c = b, c, a
+print(a, b, c)
+
+'''relational operator'''
+print('Is 98 greater than 90?', 98>90)
+print('Is 98 less than 90?', 98<90)
+print(98==90)
+print(98!=90, 98>=90, 98<=90, 98<=98, 90>=90)
+
+'''logic operator'''
+print(True and True)
+print(True and False)
+print(False and False)
+print(False and True)
+print(8>7 and 6>5) # True
+print(8>7 and 6<5) # False
+print(8<7 and 10/0) # False, no error: when the first argument is False, immediately get result --> False
+
+print(True or True)
+print(True or False)
+print(False or False)
+print(False or True)
+print(8>7 or 10/0) # True, no error
+
+print(not True) # False
+print(not False) # True
+print(not(8>7)) # not True --> False
 
 
 
