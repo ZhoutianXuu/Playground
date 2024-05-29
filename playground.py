@@ -195,58 +195,73 @@ Today is a good day
 # print(10/0) # error, division by zero
 
 '''assignment-operator'''
-x = 20
-y = 10
-x = x + y # x = 20 + 10 = 30
-x+=y # same as x = x + y
-print(x) # x = 30 + 10
-x-=y # same as x = x - y
-print(x)
-x*=y # same as x = x * y
-print(x)
-x/=y # x = x / y, type converts to float
-print(x, type(x))
-x%=2 # x = x % 2 
-print(x)
-z = 3
-y//=z # y = y // z
-print(y)
-y**=2
-print(y)
-a = b = c = 100 # a = 100, b = 100, c = 100
-print(a,b,c)
-a,b = 10,20 # a = 10, b = 20
-print(a,b)
-a,b = b,a # a = b, b = a at same time
-print(a,b)
-c = 32
-a, b, c = b, c, a
-print(a, b, c)
+# x = 20
+# y = 10
+# x = x + y # x = 20 + 10 = 30
+# x+=y # same as x = x + y
+# print(x) # x = 30 + 10
+# x-=y # same as x = x - y
+# print(x)
+# x*=y # same as x = x * y
+# print(x)
+# x/=y # x = x / y, type converts to float
+# print(x, type(x))
+# x%=2 # x = x % 2 
+# print(x)
+# z = 3
+# y//=z # y = y // z
+# print(y)
+# y**=2
+# print(y)
+# a = b = c = 100 # a = 100, b = 100, c = 100
+# print(a,b,c)
+# a,b = 10,20 # a = 10, b = 20
+# print(a,b)
+# a,b = b,a # a = b, b = a at same time
+# print(a,b)
+# c = 32
+# a, b, c = b, c, a
+# print(a, b, c)
 
-'''relational operator'''
-print('Is 98 greater than 90?', 98>90)
-print('Is 98 less than 90?', 98<90)
-print(98==90)
-print(98!=90, 98>=90, 98<=90, 98<=98, 90>=90)
+# '''relational operator'''
+# print('Is 98 greater than 90?', 98>90)
+# print('Is 98 less than 90?', 98<90)
+# print(98==90)
+# print(98!=90, 98>=90, 98<=90, 98<=98, 90>=90)
 
-'''logic operator'''
-print(True and True)
-print(True and False)
-print(False and False)
-print(False and True)
-print(8>7 and 6>5) # True
-print(8>7 and 6<5) # False
-print(8<7 and 10/0) # False, no error: when the first argument is False, immediately get result --> False
+# '''logic operator'''
+# print(True and True)
+# print(True and False)
+# print(False and False)
+# print(False and True)
+# print(8>7 and 6>5) # True
+# print(8>7 and 6<5) # False
+# print(8<7 and 10/0) # False, no error: when the first argument is False, immediately get result --> False
 
-print(True or True)
-print(True or False)
-print(False or False)
-print(False or True)
-print(8>7 or 10/0) # True, no error
+# print(True or True)
+# print(True or False)
+# print(False or False)
+# print(False or True)
+# print(8>7 or 10/0) # True, no error
 
-print(not True) # False
-print(not False) # True
-print(not(8>7)) # not True --> False
+# print(not True) # False
+# print(not False) # True
+# print(not(8>7)) # not True --> False
 
+# # Method 1
+# num = eval(input("Input a four-digit number: "))
+# print("ones:", num%10)
+# print("tens:", num//10%10)
+# print("hundreds:", num//100%10)
+# print("thousands:", num//1000)
+# # Method 2
+# num = input("Input a four-digit number: ")
+# print("ones:", num[3])
+# print("tens:", num[2])
+# print("hundreds:", num[1])
+# print("thousands:", num[0])
 
+father_height = eval(input("Input father's height: "))
+mother_height = eval(input("Input father's height: "))
+print("Predicted height of son: ", (father_height+mother_height)*0.54)
 
